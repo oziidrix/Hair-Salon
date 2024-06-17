@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty Salon</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <style>
+        /* General Styles */
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+        body {
+            font-family: 'Ubuntu', sans-serif;
+            color: #333;
+        }
+
+        .navbar {
+            margin-bottom: 50px;
+        }
+
+        .hero-section {
+            background: url('hero-bg.jpg') no-repeat center center/cover;
+            color: white;
+            padding: 100px 0;
+        }
+
+        .hero-section h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .about-section img {
+            border-radius: 10px;
+        }
+
+        .section-title {
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .services-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .services-section ul li {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .contact-section h3 {
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .contact-section .form-control {
+            margin-bottom: 15px;
+        }
+
+        .social-icons img {
+            margin-right: 10px;
+            width: 30px;
+            height: 30px;
+        }
+
+        .btn-primary {
+            background-color: #ff7f50;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: #ff6347;
+        }
+
+        /* Adjustments for Flatpickr */
+        .flatpickr-time {
+            margin-top: 10px; /* Add more space above the time picker */
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Beauty Salon</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Home Section -->
+<section id="home" class="hero-section text-center">
+    <div class="container">
+        <h1 class="display-4">Transform Your Beauty</h1>
+        <p class="lead">Expert Hair and Makeup Services</p>
+        <a href="#services" class="btn btn-primary btn-lg">Explore Services</a>
+    </div>
+</section>
+
+<!-- About Us Section -->
+<section id="about" class="about-section py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <h2 class="section-title">Our Story</h2>
+                <p>Welcome to our beauty salon, where we transform your beauty with expert hair and makeup services. Our mission is to provide exceptional services tailored to your unique style.</p>
+            </div>
+            <div class="col-lg-6">
+                <img src="salon-interior.jpg" class="img-fluid" alt="Salon Interior">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="services-section py-5 bg-light">
+    <div class="container">
+        <h2 class="section-title">Our Services</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Hair Services</h3>
+                <ul>
+                    <li>Haircuts</li>
+                    <li>Coloring</li>
+                    <li>Styling</li>
+                    <li>Extensions</li>
+                    <li>Treatments</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h3>Makeup Services</h3>
+                <ul>
+                    <li>Bridal Makeup</li>
+                    <li>Special Events</li>
+                    <li>Daily Makeup</li>
+                    <li>Lessons</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Button Section -->
+<section class="bg-light py-5">
+    <div class="container text-center">
+        <p class="lead mb-4">Check out our clients</p>
+        <a href="#" class="btn btn-primary btn-lg">View Client Gallery</a>
+    </div>
+</section>
+
+<!-- Contact Us Section -->
+<section id="contact" class="contact-section py-5">
+    <div class="container">
+        <h2 class="section-title">Book an Appointment</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Your Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="appointment">Appointment</label>
+                        <input type="text" class="form-control" id="appointment" placeholder="Select Date and Time">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea class="form-control" id="message" rows="4" placeholder="Your Message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <h3>Get In Touch</h3>
+                <p><strong>Address:</strong> 123 Beauty St, Glamour City</p>
+                <p><strong>Phone:</strong> (123) 456-7890</p>
+                <p><strong>Email:</strong> contact@beautysalon.com</p>
+                <p><strong>Follow Us:</strong></p>
+                <p class="social-icons">
+                    <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+                    <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+                    <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script>
+    flatpickr("#appointment", {
+        enableTime: true,
+        dateFormat: "Y-m-d H:i",
+        minDate: "today",
+        defaultHour: 8,
+        defaultMinute: 30,
+        time_24hr: true,
+        minTime: "08:30",
+        maxTime: "15:30"
+    });
+</script>
+</body>
+</html>
